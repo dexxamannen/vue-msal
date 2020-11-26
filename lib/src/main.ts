@@ -40,6 +40,8 @@ export class MSAL implements MSALBasic {
         navigateToLoginRequestUrl: true,
         requireAuthOnInitialize: false,
         autoRefreshToken: true,
+        knownAuthorities: [],
+        authorityMetadata: '',
         onAuthentication: (error, response) => {},
         onToken: (error, response) => {},
         beforeSignOut: () => {}
@@ -72,6 +74,8 @@ export class MSAL implements MSALBasic {
                 authority: this.auth.authority || `https://${this.auth.tenantName}/${this.auth.tenantId}`,
                 validateAuthority: this.auth.validateAuthority,
                 redirectUri: this.auth.redirectUri,
+                knownAuthorities: this.auth.knownAuthorities,
+                authorityMetadata: this.auth.authorityMetadata,
                 postLogoutRedirectUri: this.auth.postLogoutRedirectUri,
                 navigateToLoginRequestUrl: this.auth.navigateToLoginRequestUrl
             },
