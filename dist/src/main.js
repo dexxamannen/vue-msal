@@ -87,7 +87,6 @@ var MSAL = /** @class */ (function () {
             requireAuthOnInitialize: false,
             autoRefreshToken: true,
             knownAuthorities: [],
-            authorityMetadata: '',
             onAuthentication: function (error, response) { },
             onToken: function (error, response) { },
             beforeSignOut: function () { }
@@ -119,7 +118,6 @@ var MSAL = /** @class */ (function () {
                 validateAuthority: this.auth.validateAuthority,
                 redirectUri: this.auth.redirectUri,
                 knownAuthorities: this.auth.knownAuthorities,
-                authorityMetadata: this.auth.authorityMetadata,
                 postLogoutRedirectUri: this.auth.postLogoutRedirectUri,
                 navigateToLoginRequestUrl: this.auth.navigateToLoginRequestUrl
             },
